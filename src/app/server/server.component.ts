@@ -9,5 +9,12 @@ styleUrls:['./server.component.css']
 
 })
 export class ServerComponent{
+server = 'Servers'
+serverId:number =10;
+serverStatus: string = 'offline';
 
+getServerStatus(){
+  return this.serverStatus
+
+}
 }
