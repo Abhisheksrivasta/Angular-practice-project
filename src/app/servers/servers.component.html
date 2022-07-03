@@ -1,4 +1,30 @@
-<button class="btn btn-primary" [disabled]="!allowNewServer">Add server</button>
+<label>ServerName</label>
+<!-- <input type="text" class="form-control"
+(input)="onUpdateServerName($event)"> -->
+
+<input type="text"
+class="form-control"
+[(ngModel)]="serverName">
+
+<label>UserName</label>
+<input type="text"
+class="form-control"
+[(ngModel)]="userName">
+<p>{{userName}}</p>
+
+<button class="btn btn-primary" [disabled]="!userName"
+(click)="onCreateServer()"
+>Add UserName</button>
+
+
+
+<!-- <p>{{serverName}}</p> -->
+
+
+<button class="btn btn-primary" [disabled]="!allowNewServer"
+(click)="onCreateServer()">Add server</button>
 
 <!-- <p>{{allowNewServer}}</p> string interpolation -->
-<p [innerText]="allowNewServer"></p>
+<!-- <p [innerText]="allowNewServer"></p> -->
+<p>{{serverCreationStatus}}</p>
+
