@@ -12,28 +12,31 @@ styleUrls: ['./servers.component.css']
 export class ServersComponent implements OnInit {
  allowNewServer=false
  serverCreationStatus ='No server was created'
- serverName ='Testserver';
-
+  serverName ='Testserver';
+  serverCreated=false;
+servers=['Testserver','Testserver2']
+loop=['this','is','ram']
 
   userName='abhishek'
   constructor() {
-    setTimeout(()=>{
-      this.allowNewServer=true
-    },2000)
+    // setTimeout(()=>{
+    //   this.allowNewServer=true
+    // },2000)
    }
 
   ngOnInit(): void {
   }
 
   onCreateServer(){
-
     this.serverCreationStatus='Server was created !Name is ' + this.serverName
-    this.userName=''
+    // this.userName=''
+    this.serverCreated = true
+    this.servers.push(this.serverName)
   }
 
 onUpdateServerName(event:Event){
 this.serverName=(<HTMLInputElement>event.target).value;
-// this.userName=(<HTMLInputElement>event.target).value;
+this.userName=(<HTMLInputElement>event.target).value;
 }
 
 

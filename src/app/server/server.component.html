@@ -1,4 +1,7 @@
-<p>{{'server'}} with Id {{serverId}} is {{getServerStatus()}}</p>
-
+<p [ngStyle]="{backgroundColor:getColor()}"
+[ngClass]="{online:serverStatus==='online'}"
+>{{'server'}} with
+  Id {{serverId}} is {{getServerStatus()}}</p>
+  <p *ngFor="let el of serverFor;let i = index">{{el}}{{i}}}</p>
 
 
