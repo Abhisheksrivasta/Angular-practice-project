@@ -8,10 +8,12 @@ import { AppComponent } from './app.component';
 import { ServersComponent } from './servers/servers.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { FormsModule } from '@angular/forms';
+import { NewfileComponent } from './newfile/newfile.component';
 
 
 @NgModule({
-  declarations: [AppComponent,ServerComponent, ServersComponent, SuccessAlertComponent,WarningAlert],
+  declarations: [AppComponent,ServerComponent, ServersComponent, SuccessAlertComponent,WarningAlert
+    ,WarningAlert, NewfileComponent],
   imports: [BrowserModule, AppRoutingModule,FormsModule],
   providers: [],
   bootstrap: [AppComponent],
